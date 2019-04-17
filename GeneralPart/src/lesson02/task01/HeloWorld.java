@@ -10,13 +10,13 @@ public class HeloWorld {
 
     private static String helloWorld;
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws FooException {
 
 //        java.lang.NullPointerException
         try {
             System.out.println(helloWorld.toLowerCase());
         } catch (NullPointerException e) {
-            System.out.println(e);
+            System.out.println(e.toString());
         }
 
 //        java.lang.ArrayIndexOutOfBoundsException
@@ -24,11 +24,15 @@ public class HeloWorld {
             helloWorld = "Hello world!";
             System.out.println(helloWorld.toCharArray()[100]);
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println(e);
+            System.out.println(e.toString());
         }
 
-//        java.lang.Exception
-        throw new Exception();
+//        java.lang.FooException
+        throw new FooException();
+
+    }
+
+    private static class FooException extends Exception {
 
     }
 }
