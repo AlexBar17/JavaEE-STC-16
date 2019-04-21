@@ -6,7 +6,7 @@ package lesson02.task01;
 //Смоделировав ошибку «ArrayIndexOutOfBoundsException»
 //Вызвав свой вариант ошибки через оператор throw
 
-public class HeloWorld {
+public class HelloWorld {
 
     private static String helloWorld;
 
