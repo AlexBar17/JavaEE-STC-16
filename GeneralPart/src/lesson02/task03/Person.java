@@ -73,7 +73,7 @@ public class Person {
      * Сгенерировать массив из людей размера <B>size</B>.
      *
      * @param size размер массива
-     * @return age
+     * @return Person[]
      */
 
     public static Person[] getArrayOfPerson(int size) {

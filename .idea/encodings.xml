@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="windows-1251">
-    <file url="file://$PROJECT_DIR$/GeneralPart/src/lesson02/task02/Solution.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/GeneralPart/src/lesson02/task02/Solution.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GeneralPart/src/lesson02/task03/ComparedEx/MatchNameAgeException.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GeneralPart/src/lesson02/task03/Person.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GeneralPart/src/lesson02/task03/PersonInsertionSort.java" charset="UTF-8" />
@@ -9,6 +9,8 @@
     <file url="file://$PROJECT_DIR$/GeneralPart/src/lesson02/task03/Sex.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GeneralPart/src/lesson02/task03/Solution.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GeneralPart/src/lesson02/task03/Sortable.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GeneralPart/src/lesson04/task01/MathBox.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GeneralPart/src/lesson04/task03/MathBox.java" charset="UTF-8" />
     <file url="PROJECT" charset="windows-1251" />
   </component>
 </project>

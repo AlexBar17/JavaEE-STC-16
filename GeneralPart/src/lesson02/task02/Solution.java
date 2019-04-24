@@ -8,7 +8,7 @@ public class Solution {
 
     public static void main(String[] args) throws IOException {
 
-        System.out.println("Введите количество случайных чисел для программы:");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃР»СѓС‡Р°Р№РЅС‹С… С‡РёСЃРµР» РґР»СЏ РїСЂРѕРіСЂР°РјРјС‹:");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int count = Integer.parseInt(reader.readLine());
         reader.close();
@@ -18,7 +18,7 @@ public class Solution {
             int k = (int) (-2 + (Math.random() * 101));
 
             if (k < 0) {
-                throw new ArithmeticException(String.format("Число %d меньше нуля", k));
+                throw new ArithmeticException(String.format("Р§РёСЃР»Рѕ %d РјРµРЅСЊС€Рµ РЅСѓР»СЏ", k));
             }
 
             double q = Math.sqrt(k);
