@@ -1,4 +1,4 @@
-package lesson02.task03;
+package lesson05.task01;
 
 import org.apache.commons.lang3.RandomStringUtils;
 

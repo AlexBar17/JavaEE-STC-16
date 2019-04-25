@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Класс с точкой входа.
@@ -25,7 +26,7 @@ public class Solution {
         Person[] personArray = Person.getArrayOfPerson(sizeOfPersonArray);
 
 
-        ArrayList<Sortable> sorts = new ArrayList<>();
+        List<Sortable> sorts = new ArrayList<>();
 
         sorts.add(new PersonInsertionSort());
         sorts.add(new PersonSelectionSort());
