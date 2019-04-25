@@ -4,7 +4,11 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-public class MathBox<T extends Number> extends ObjectClass<Number>{
+/**
+ * Класс работающий с обертками примитивных типов
+ */
+
+public class MathBox<T extends Number> extends ObjectClass<Number> {
 
     public MathBox(Number[] arr) throws NullPointerException {
 
@@ -88,24 +92,24 @@ public class MathBox<T extends Number> extends ObjectClass<Number>{
     }
 
 
-
-    public static void main(String[] args) {
-        Integer[] arr = new Integer[]{4, 2, 30};
-        MathBox<Number> mathBox = new MathBox<>(arr);
-
-        System.out.println(mathBox.summator());
-        mathBox.splitter(4.0);
-        Double a = 4d;
-        Double b = 40d;
-        Object o = a;
-//        mathBox.addObject(o);
-        mathBox.dump();
-        mathBox.deleteObject(b);
-        mathBox.dump();
-
-        ObjectClass<Object> as = new ObjectClass<>();
-
-
-    }
+//    public static void main(String[] args) {
+//        Number[] arr = new Number[]{4, 2, 30.40};
+//        MathBox<Number> mathBox = new MathBox<>(arr);
+//
+//        System.out.println(mathBox.summator());
+//        mathBox.splitter(4.0);
+//        Double a = 4d;
+//        Double b = 40d;
+//        Object o = a;
+//        mathBox.addObject(o); //Ошибка
+//        mathBox.dump();
+//        System.out.println();
+//        mathBox.deleteObject(b);
+//        mathBox.dump();
+//
+//        ObjectClass<Object> as = new ObjectClass<>();
+//
+//
+//    }
 
 }

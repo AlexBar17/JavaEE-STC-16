@@ -1,10 +1,12 @@
 package lesson04.task01;
 
-import java.math.BigDecimal;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Objects;
 import java.util.Set;
+
+/**
+ * Класс работающий с обертками примитивных типов
+ */
 
 public class MathBox {
 
@@ -89,17 +91,7 @@ public class MathBox {
         return Objects.equals(set, mathBox.set);
     }
 
-    public static void main(String[] args) {
-        Number[] arr = new Integer[]{4, 2, 30};
-        MathBox mathBox = new MathBox(arr);
 
-        System.out.println(mathBox.summator());
-        mathBox.splitter(2.0);
-        for (Number number:
-        arr) {
-            System.out.println(number);
-        }
 
-    }
 
 }
