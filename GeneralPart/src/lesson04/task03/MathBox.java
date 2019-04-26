@@ -80,7 +80,9 @@ public class MathBox<T extends Number> extends ObjectClass<Number> {
 
     @Override
     public int hashCode() {
-        return 17 * set.size();
+        int result = 17;
+        result = 37 * result + (set == null ? 0 : set.hashCode());
+        return result;
     }
 
     @Override
