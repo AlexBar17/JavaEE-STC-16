@@ -8,7 +8,7 @@ import java.util.Comparator;
  * Класс для работы с человеком.
  */
 
-public class Person {
+public class Person implements Comparable<Person> {
     private Sex sex;
     private String name;
     private int age;
@@ -28,7 +28,7 @@ public class Person {
     }
 
     /**
-     * Получить возраст.
+     * Получает возраст.
      *
      * @return age
      */
@@ -38,7 +38,7 @@ public class Person {
     }
 
     /**
-     * Получить имя.
+     * Получает имя.
      *
      * @return name
      */
@@ -48,7 +48,7 @@ public class Person {
     }
 
     /**
-     * Получить пол.
+     * Получает пол.
      *
      * @return sex
      */
@@ -58,7 +58,7 @@ public class Person {
     }
 
     /**
-     * Получить строковое представление человека со всеми полями
+     * Получает строковое представление человека со всеми полями
      */
     @Override
     public String toString() {
@@ -70,7 +70,7 @@ public class Person {
     }
 
     /**
-     * Сгенерировать массив из людей размера <B>size</B>.
+     * Генерирует массив со значениями из людей размера <B>size</B>.
      *
      * @param size размер массива
      * @return Person[]
@@ -99,7 +99,38 @@ public class Person {
     }
 
     /**
-     * Сравнить поля <B>name</B> через стандартное сравнение класса String.
+     * Сранивает с другим человеком, сначала по полу (мужчина = 1, женщина = 2), затем по имени и возрасту
+     *
+     * @param p другой человек
+     * @return отрицательное целое число, ноль или положительное целое число,
+     * соответственно если этот объект меньше, равен или больше указанного объекта.
+     */
+
+    @Override
+    public int compareTo(Person p) {
+        Comparator<Person> pcomp =
+                new PersonSexComparator().thenComparing(
+                        new PersonNameComparator().thenComparing(
+                                new PersonAgeComparator()));
+
+        return pcomp.compare(this, p);
+    }
+
+    /**
+     * Сранивает поля <B>sex</B> - <B>W</B> имеет больший вес чем <B>M</B>
+     */
+
+    public static class PersonSexComparator implements Comparator<Person> {
+
+        public int compare(Person a, Person b) {
+            if (a.getSex() == b.getSex()) return 0;
+            if (a.getSex() == Sex.M) return -1;
+            return 1;
+        }
+    }
+
+    /**
+     * Сранивает поля <B>name</B> через стандартное сравнение класса String.
      */
 
     public static class PersonNameComparator implements Comparator<Person> {
@@ -111,7 +142,7 @@ public class Person {
     }
 
     /**
-     * Сравнить поля <B>age</B> через стандартное сравнение класса Integer.
+     * Сранивает поля <B>age</B> через стандартное сравнение класса Integer.
      */
 
     public static class PersonAgeComparator implements Comparator<Person> {
@@ -124,5 +155,6 @@ public class Person {
             return ageA.compareTo(ageB);
         }
     }
+
 
 }

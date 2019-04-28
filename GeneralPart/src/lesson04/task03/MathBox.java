@@ -94,24 +94,27 @@ public class MathBox<T extends Number> extends ObjectClass<Number> {
     }
 
 
-//    public static void main(String[] args) {
-//        Number[] arr = new Number[]{4, 2, 30.40};
-//        MathBox<Number> mathBox = new MathBox<>(arr);
-//
-//        System.out.println(mathBox.summator());
-//        mathBox.splitter(4.0);
-//        Double a = 4d;
-//        Double b = 40d;
-//        Object o = a;
+    public static void main(String[] args) {
+        Number[] arr = new Number[]{4, 2, 30.40};
+        MathBox<Number> mathBox = new MathBox<>(arr);
+        MathBox<Number> mathBox1 = new MathBox<>(arr);
+
+        System.out.println(mathBox.equals(mathBox1));
+
+        System.out.println(mathBox.summator());
+        mathBox.splitter(4.0);
+        Double a = 4d;
+        Double b = 40d;
+        Object o = a;
 //        mathBox.addObject(o); //Ошибка
-//        mathBox.dump();
-//        System.out.println();
-//        mathBox.deleteObject(b);
-//        mathBox.dump();
-//
-//        ObjectClass<Object> as = new ObjectClass<>();
-//
-//
-//    }
+        mathBox.dump();
+        System.out.println();
+        mathBox.deleteObject(b);
+        mathBox.dump();
+
+        ObjectClass<Object> as = new ObjectClass<>();
+
+
+    }
 
 }
