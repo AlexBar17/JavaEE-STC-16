@@ -1,4 +1,4 @@
-package lesson9.task01;
+package lesson09.task01;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -25,7 +25,7 @@ public class Client {
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new PrintWriter(socket.getOutputStream(), true);
 
-            System.out.println("������ ᢮� ���:");
+            System.out.println("Введите ваше имя:");
             out.println(scan.nextLine());
 
             Resender resender = new Resender();
@@ -46,7 +46,6 @@ public class Client {
                 out.close();
                 socket.close();
             } catch (Exception e) {
-                System.err.println("��⮪� �� �뫨 �������!");
             }
         }
 
@@ -71,7 +70,6 @@ public class Client {
                     System.out.println(str);
                 }
             } catch (IOException e) {
-                System.err.println("�訡�� �� ����祭�� ᮮ�饭��.");
                 e.printStackTrace();
             }
         }

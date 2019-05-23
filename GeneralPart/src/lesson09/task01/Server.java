@@ -1,13 +1,10 @@
-package lesson9.task01;
+package lesson09.task01;
 
 import java.io.*;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class Server {
 
@@ -15,8 +12,9 @@ public class Server {
     public static ServerSocket serverSocket = null; //TCP socket
     private static List<Connection> connections =
             Collections.synchronizedList(new ArrayList<Connection>());
+    private static Map<String, Connection> contactBook = new HashMap<>();
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
 
         try {
@@ -47,11 +45,10 @@ public class Server {
             synchronized(connections) {
                 Iterator<Connection> iter = connections.iterator();
                 while(iter.hasNext()) {
-                    ((Connection) iter.next()).close();
+                    iter.next().close();
                 }
             }
         } catch (Exception e) {
-            System.err.println("Не удалось закрыть все сокеты");
         }
     }
 
@@ -71,7 +68,6 @@ public class Server {
                 out = new PrintWriter(socket.getOutputStream(), true);
 
             } catch (IOException e) {
-                e.printStackTrace();
                 close();
             }
         }
@@ -81,6 +77,7 @@ public class Server {
         public void run() {
             try {
                 name = in.readLine();
+                contactBook.put(name, this);
                 synchronized(connections) {
                     Iterator<Connection> iter = connections.iterator();
                     while(iter.hasNext()) {
@@ -93,12 +90,12 @@ public class Server {
                     str = in.readLine();
                     if(str.equals("quite")) break;
                     if(str.equals("~")) {
-                        this.out.println("Введите имя пользователя");
-                        while (true) {
+                        String nameForPrivate = in.readLine();
+                        Connection privateConnection = contactBook.get(nameForPrivate);
                             str = in.readLine();
-                            System.out.println(str);
-                            if(str.equals("quite")) break;
-                        }
+                        System.out.println("Считал " + str);
+                        privateConnection.out.println(name+" told you: " + str);
+
                         continue;
                     }
 
@@ -136,7 +133,6 @@ public class Server {
                     System.exit(0);
                 }
             } catch (Exception e) {
-                System.err.println("Не удалось закрыть подключение!");
             }
         }
     }
