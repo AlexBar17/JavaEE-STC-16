@@ -1,4 +1,4 @@
-package lesson09.task01;
+package lesson10.task01_02;
 
 import java.io.*;
 import java.net.InetAddress;
