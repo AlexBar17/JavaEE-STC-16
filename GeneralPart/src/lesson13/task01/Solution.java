@@ -97,6 +97,7 @@ public class Solution {
                 st.executeUpdate("INSERT INTO \"test\".\"user_role\"(user_id, role_id) VALUES (3,1)");
 
                 cn.commit();
+                logger.info("Success");
 
             } catch (SQLException e) {
                 logger.error("Rollback", e);
@@ -110,6 +111,7 @@ public class Solution {
             try {
                 st.executeUpdate("INSERT INTO \"test\".\"AnotherUser\"(name, birthday, login_id, city, description) VALUES(12, 'may', 1, 'Mos', 'not good employee')");
                 cn.commit();
+                logger.info("Success");
 
             } catch (SQLException e) {
                 logger.error("Rollback", e);
