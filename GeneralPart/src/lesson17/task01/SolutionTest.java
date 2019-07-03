@@ -1,4 +1,4 @@
-package lesson15;
+package lesson17.task01;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
