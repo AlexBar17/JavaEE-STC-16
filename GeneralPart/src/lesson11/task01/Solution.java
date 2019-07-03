@@ -7,12 +7,14 @@ package lesson11.task01;
 
  */
 
+
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
 
-public class Solution {
+public class Solution{
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
 
