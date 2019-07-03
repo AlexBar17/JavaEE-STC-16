@@ -1,8 +1,10 @@
 package lesson22.task01.src.main.java.ru.inno.stc14.servlet;
 
-import ru.inno.stc14.entity.Person;
-import ru.inno.stc14.service.PersonService;
-import ru.inno.stc14.service.PersonServiceImpl;
+
+
+import lesson22.task01.src.main.java.ru.inno.stc14.entity.Person;
+import lesson22.task01.src.main.java.ru.inno.stc14.service.PersonService;
+import lesson22.task01.src.main.java.ru.inno.stc14.service.PersonServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebFilter;
