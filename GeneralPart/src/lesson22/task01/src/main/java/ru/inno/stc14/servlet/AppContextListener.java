@@ -1,7 +1,8 @@
 package lesson22.task01.src.main.java.ru.inno.stc14.servlet;
 
-import ru.inno.stc14.dao.ConnectionManager;
-import ru.inno.stc14.dao.jdbc.DBConnectionManager;
+
+import lesson22.task01.src.main.java.ru.inno.stc14.dao.ConnectionManager;
+import lesson22.task01.src.main.java.ru.inno.stc14.dao.jdbc.DBConnectionManager;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
